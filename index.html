@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hu-HU">
+    <!-- Frontendfejlesztés az alapoktól Projektfeladat
+    Egy elképzelt cég bemutatkozó weboldalára kapsz megbízást.
+    A feladat az, hogy a megismert eszközökkel és az interneten fellelhető végtelen eszköztárral
+    implementáld a weboldal statikus változatát.
+    A weboldal struktúrájának a következőképpen kell kinéznie majd:
+    ● index.html Kezdőoldal
+    ● kapcsolat.html Kapcsolatfelvételi űrlap
+    ● ceginformacio.html Céginformáció
+    ● szolgaltatasok.html Szolgáltatások
+    A weboldal designját és tartalmát az alábbi Figma linkeken találod meg:
+    Desktop Dark Mode: Desktop Light Mode: Mobil:
+    Dark mode elemek Light mode elemek Mobil elemek
+    Dark Mode prototípus Light mode prototípus Mobil prototípus
+    Az elkészült fájlokat töltsd fel a githubodba egy erre létrehozott, új repositoryba és publikáld
+    github pages-re.
+    A repository és az elkészült weboldal linkjét küldd el nekem.
+    Az értékelésben szerepet fog játszani (fontossági sorrendben):
+    1. terv vs. megvalósítás (pixelpontosság)
+    2. funkcionalitás teljessége
+    3. használhatóság (pl. fekete alapon, fekete szöveg ne legyen)
+    4. reszponzivitás (360px-től 1920px-ig)
+    5. valid html, css, js
+    6. jövőállóság (inline style-ok, abszolút pozíció, változók, konzisztencia,
+    karbantarthatóság, stb).
+    7. commit history
+    8. szemantikus html
+    Plusz pont jár:
+    + látens ügyféligények kielégítéséért
+    + feldobott labdák lecsapásáért (kreativitásodra bízva) -->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>ACME Inc.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:url" content="http://www.fentart.com/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="ACME main" />
+  <meta property="og:description" content="maincontent" />
+  <meta property="og:image" content="#" />
+  <link rel="stylesheet" id="style-css" href="style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap" rel="stylesheet">
+  <script>
+    function menuoff() {
+      const menustate = document.getElementById("mainmenu");
+      if (menustate.style.display === "block") {
+        menustate.style.display = "none";
+      } else {
+        menustate.style.display = "block";
+      }
+    }
+  </script>
+</head>
+<body>
+    
+<div id="coverpage">
+    <div class="mbox">
+        <div class="company">
+        ACME Inc.
+        </div>
+        <div class="c-menu">
+        <a href="#">Céginformáció</a></br>
+        <a href="#">Szolgáltatásaink</a></br>
+        <a href="#">kapcsolat</a></br>
+        </div>
+    </div>
+</div>
+
+</body>
