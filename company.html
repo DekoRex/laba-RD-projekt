@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu-HU">
-    <!-- Frontendfejlesztés az alapoktól Projektfeladat
+  <!-- Frontendfejlesztés az alapoktól Projektfeladat
     Egy elképzelt cég bemutatkozó weboldalára kapsz megbízást.
     A feladat az, hogy a megismert eszközökkel és az interneten fellelhető végtelen eszköztárral
     implementáld a weboldal statikus változatát.
@@ -29,90 +29,145 @@
     Plusz pont jár:
     + látens ügyféligények kielégítéséért
     + feldobott labdák lecsapásáért (kreativitásodra bízva) -->
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>ACME Inc.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:url" content="" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="ACME company" />
-  <meta property="og:description" content="maincontent" />
-  <meta property="og:image" content="#" />
-  <link rel="stylesheet" id="style-css" href="style.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<script>
-function menuoff() {
-      const menustate = document.getElementById("mainmenu");
-      if (menustate.style.display === "block") {
-        menustate.style.display = "none";
-      } else {
-        menustate.style.display = "block";
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ACME Inc.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ACME company" />
+    <meta property="og:description" content="maincontent" />
+    <meta property="og:image" content="#" />
+    <link
+      rel="stylesheet"
+      id="style-css"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function menuoff() {
+        const menustate = document.getElementById("mainmenu");
+        if (menustate.style.display === "block") {
+          menustate.style.display = "none";
+        } else {
+          menustate.style.display = "block";
+        }
       }
-    }
-  </script>
-</head>
-<body>
- <div id="maincontent">
-<section id="frame-1"> 
-    <div class="container">
-    <div class="headlogo"><a href="index.html">ACME Inc.</a></div>
-    <menu>
-        <ul>
-            <li><a href="company.html">Céginformáció</a></li>
-            <li><a href="services.html">Szolgáltatásaink</a></li>
-            <li><a href="contact.html">Kapcsolat</a></li>
-        </ul>
-    </menu>
+    </script>
+  </head>
+  <body>
+    <div id="maincontent">
+      <section id="frame-1">
+        <div class="container">
+          <div class="headlogo"><a href="index.html">ACME Inc.</a></div>
+          <menu id="mainmenu">
+            <ul>
+              <li><a href="company.html" target="_self" style="font-weight: 700;">Céginformáció</a></li>
+              <li><a href="services.html" target="_self">Szolgáltatásaink</a></li>
+              <li><a href="contact.html" target="_self">Kapcsolat</a></li>
+            </ul>
+          </menu>
+        </div>
+      </section>
+      <section class="group2">
+        <div class="container">
+          <!-- <img src="ACMEPIC/computer.png" alt="computer screen"> -->
+          <div class="headline">
+            <h1>
+              Weboldalakat <br />
+              építünk
+            </h1>
+          </div>
+          <div class="serviceslink">
+            <a href="services.html">Szolgáltatásaink»</a>
+          </div>
+        </div>
+      </section>
+      <div class="group1">
+        <div class="testimonial">
+          <h1>Rólunk mondták</h1>
+          <div class="users">
+            <div class="userbox">
+              <img src="ACMEPIC/rita.png" alt="Rita-marketing" />
+              <div class="usertext">
+                Ezzel a céggel bármikor dolgoznék. Alaposak, pontosak, gyorsan
+                megértik az igényeimet.
+              </div>
+              <div class="username">Rita - marketing</div>
+            </div>
+            <div class="userbox">
+              <img src="ACMEPIC/szilvi.png" alt="Szilvi-CEO" />
+              <div class="usertext">
+                Magasan képzett szakemberekkel találkoztam, minden apró
+                részletre odafigyeltek, nem tudnék kifogást emelni!
+              </div>
+              <div class="username">Szilvi - CEO</div>
+            </div>
+            <div class="userbox">
+              <img src="ACMEPIC/dezso.png" alt="Dezso-HR" />
+              <div class="usertext">
+                Akár a legapróbb igénnyel is fordulhatok hozzájuk, pillanatok
+                alatt megcsinálják, még sosem dolgoztam ennyire agilis csapattal
+              </div>
+              <div class="username">Dezso - HR</div>
+            </div>
+          </div>
+        </div>
     </div>
-</section>
-<section class="group2">
-    <div class="container">
-<!-- <img src="ACMEPIC/computer.png" alt="computer screen"> -->
-    <div class="headline"> <h1>  Weboldalakat <br>
-    építünk</h1></div> 
-    <div class="serviceslink"><a href="services.html">Szolgáltatásaink»</a></div>
-</div>
-</section>
-<div class="group1">
-<div class="testimonial">
-   <h1>Rólunk mondták</h1> 
-    <ul class="users">
-        <li><img src="ACMEPIC/rita.png" alt="Rita-marketing">
-            <div class="usertext">Ezzel a céggel bármikor dolgoznék. Alaposak, pontosak, gyorsan megértik az igényeimet.
-        </div><div class="username">Rita - marketing</div></li>
-        <li><img src="ACMEPIC/szilvi.png" alt="Szilvi-CEO">
-            <div class="usertext">Magasan képzett szakemberekkel találkoztam, minden apró részletre odafigyeltek, nem tudnék kifogást emelni!
-        </div><div class="username">Szilvi - CEO</div></li>
-        <li><img src="ACMEPIC/dezso.png" alt="Dezso-HR">
-            <div class="usertext">Akár a legapróbb igénnyel is fordulhatok hozzájuk, pillanatok alatt megcsinálják, még sosem dolgoztam ennyire agilis csapattal
-        </div><div class="username">Dezso - HR</div></li>
-    </ul>
-</div>
-</div>
-<section class="intro">
-    <div class="textarea">
-    <h1>Bemutatkozás</h1>
-    <p>
-        A 20 éve működő weboldalkészítő cégünk elkötelezett az ügyfelek számára nyújtott minőségi szolgáltatások iránt. Az évek során számos sikeres projektet valósítottunk meg, és büszkék vagyunk arra, hogy ügyfeleink elégedettek a munkánkkal. Tapasztalt csapatunk kreatív és innovatív megoldásokat kínál, hogy minden egyes weboldalunk egyedülálló legyen és kiemelkedjen a versenytársak közül.
-<br><br>
-        Az ügyfélközpontú megközelítésünk lehetővé teszi számunkra, hogy megértsük az ügyfelek igényeit és céljait. Ezáltal pontosan tudjuk, hogyan hozzuk létre az ideális weboldalt az üzleti tevékenységük támogatására. Rendszeresen kommunikálunk az ügyfelekkel, hogy biztosítsuk, hogy minden fázisban megfeleljenek az elvárások és hogy a weboldal tökéletesen tükrözze az ügyfél márkáját és értékeit.
-        <br><br>
-        Széleskörű szolgáltatásokat kínálunk, amelyek magukban foglalják a weboldal tervezését és fejlesztését, a tartalomkezelő rendszerek beállítását, az arculattervezést és az online marketing stratégiák kidolgozását. Folyamatosan követjük a legújabb trendeket és technológiákat, hogy biztosítsuk ügyfeleinknek a legjobb és leginnovatívabb megoldásokat.
-        <br><br><br>
-        Ha olyan weboldalt szeretne, amely hatékonyan és vonzóan mutatja be vállalkozását, akkor bízzon bennünk. Tapasztalt csapatunk készen áll arra, hogy segítsen megvalósítani a webes céljait és növelje az online jelenlétét.
-    </p>
-</div>
-</section>
-<footer>
-    <div class="container">
-    ACME
-</div>
-</footer>
-</div>
-</div>  
-</body>
+        <section class="intro">
+          <div class="textarea">
+            <h1>Bemutatkozás</h1>
+            <p>
+              A 20 éve működő weboldalkészítő cégünk elkötelezett az ügyfelek
+              számára nyújtott minőségi szolgáltatások iránt. Az évek során
+              számos sikeres projektet valósítottunk meg, és büszkék vagyunk
+              arra, hogy ügyfeleink elégedettek a munkánkkal. Tapasztalt
+              csapatunk kreatív és innovatív megoldásokat kínál, hogy minden
+              egyes weboldalunk egyedülálló legyen és kiemelkedjen a
+              versenytársak közül.
+              <br /><br />
+              Az ügyfélközpontú megközelítésünk lehetővé teszi számunkra, hogy
+              megértsük az ügyfelek igényeit és céljait. Ezáltal pontosan
+              tudjuk, hogyan hozzuk létre az ideális weboldalt az üzleti
+              tevékenységük támogatására. Rendszeresen kommunikálunk az
+              ügyfelekkel, hogy biztosítsuk, hogy minden fázisban megfeleljenek
+              az elvárások és hogy a weboldal tökéletesen tükrözze az ügyfél
+              márkáját és értékeit.
+              <br /><br />
+              Széleskörű szolgáltatásokat kínálunk, amelyek magukban foglalják a
+              weboldal tervezését és fejlesztését, a tartalomkezelő rendszerek
+              beállítását, az arculattervezést és az online marketing stratégiák
+              kidolgozását. Folyamatosan követjük a legújabb trendeket és
+              technológiákat, hogy biztosítsuk ügyfeleinknek a legjobb és
+              leginnovatívabb megoldásokat.
+              <br /><br /><br />
+              Ha olyan weboldalt szeretne, amely hatékonyan és vonzóan mutatja
+              be vállalkozását, akkor bízzon bennünk. Tapasztalt csapatunk
+              készen áll arra, hogy segítsen megvalósítani a webes céljait és
+              növelje az online jelenlétét.
+            </p>
+          </div>
+        </section>
+        <footer>
+          <div class="container">ACME</div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

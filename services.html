@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu-HU">
-    <!-- Frontendfejlesztés az alapoktól Projektfeladat
+  <!-- Frontendfejlesztés az alapoktól Projektfeladat
     Egy elképzelt cég bemutatkozó weboldalára kapsz megbízást.
     A feladat az, hogy a megismert eszközökkel és az interneten fellelhető végtelen eszköztárral
     implementáld a weboldal statikus változatát.
@@ -29,64 +29,102 @@
     Plusz pont jár:
     + látens ügyféligények kielégítéséért
     + feldobott labdák lecsapásáért (kreativitásodra bízva) -->
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>ACME Inc.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:url" content="" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="ACME company" />
-  <meta property="og:description" content="maincontent" />
-  <meta property="og:image" content="#" />
-  <link rel="stylesheet" id="style-css" href="style.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<script>
-function menuoff() {
-      const menustate = document.getElementById("mainmenu");
-      if (menustate.style.display === "block") {
-        menustate.style.display = "none";
-      } else {
-        menustate.style.display = "block";
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ACME Inc.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ACME company" />
+    <meta property="og:description" content="maincontent" />
+    <meta property="og:image" content="#" />
+    <link
+      rel="stylesheet"
+      id="style-css"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function menuoff() {
+        const menustate = document.getElementById("mainmenu");
+        if (menustate.style.display === "block") {
+          menustate.style.display = "none";
+        } else {
+          menustate.style.display = "block";
+        }
       }
-    }
-  </script>
-</head>
-<body>
-    <section id="frame-1"> 
+    </script>
+  </head>
+  <body>
+    <div id="maincontent">
+      <section id="frame-1">
         <div class="container">
-        <div class="headlogo"><a href="index.html">ACME Inc.</a></div>
-        <menu>
+          <div class="headlogo"><a href="index.html">ACME Inc.</a></div>
+          <menu id="mainmenu">
             <ul>
-                <li><a href="company.html">Céginformáció</a></li>
-                <li><a href="services.html">Szolgáltatásaink</a></li>
-                <li><a href="contact.html">Kapcsolat</a></li>
+              <li><a href="company.html" target="_self" >Céginformáció</a></li>
+              <li><a href="services.html" target="_self"style="font-weight: 700;">Szolgáltatásaink</a></li>
+              <li><a href="contact.html" target="_self">Kapcsolat</a></li>
             </ul>
-        </menu>
+          </menu>
         </div>
-    </section> 
-   
-<section id="services"> 
-    <h1>Szolgáltatásaink</h1>
-    <svg viewBox="0 0 10 10">
-        <use x=0 y=0  width=123 height=64 xlink:href="symbols.svg#desktop-smartphone-transfer-icon"></use>
-    </svg>
-<div class="servicebox">
-    <img src="" alt="">
-    <h2>Weboldal tervezés
-        és fejlesztés</h2>
-    <p>A weboldalkészítő cég szakemberei által készített egyedi és modern weboldalak tervezése és fejlesztése, amelyek megfelelnek az ügyfél igényeinek és célcsoportjának</p>
-</div>
-</section>
+      </section>
+      <section class="services">
+        <h1>Szolgáltatásaink</h1>
+        <div class="servicescontainer">
+         <div class="servicesbox">
+            <img src="ACMEPIC/icon-1.png" alt="Weboldal tervezés és fejlesztés ikon">
+            <h3>Weboldal tervezés<br>és fejlesztés</h3>
+            <p>A weboldalkészítő cég szakemberei által készített egyedi és modern weboldalak tervezése és fejlesztése, amelyek megfelelnek az ügyfél igényeinek és célcsoportjának.</p>
+         </div>
+            <div class="servicesbox">
+            <img src="ACMEPIC/icon-2.png" alt="Weboldal tervezés és fejlesztés ikon">
+            <h3>Egyedi weboldal<br>design készítése</h3>
+            <p>Az ügyfelek személyre szabott és kreatív weboldal design lehetőségét kapják, amely a vállalkozásuk stílusához és brandjéhez igazodik, és segít kiemelkedni a versenytársak közül.</p>
+        </div>
+        <div class="servicesbox">
+            <img src="ACMEPIC/icon-3.png" alt="Weboldal tervezés és fejlesztés ikon">
+            <h3>Weboldal tervezés és fejlesztés</h3>
+            <p>A weboldalkészítő cég szakemberei által készített egyedi és modern weboldalak tervezése és fejlesztése, amelyek megfelelnek az ügyfél igényeinek és célcsoportjának.</p>
+        </div>
+        <div class="servicesbox">
+            <img src="ACMEPIC/icon-4.png" alt="Weboldal tervezés és fejlesztés ikon">
+            <h3>Weboldal tervezés és fejlesztés</h3>
+            <p>A weboldalkészítő cég szakemberei által készített egyedi és modern weboldalak tervezése és fejlesztése, amelyek megfelelnek az ügyfél igényeinek és célcsoportjának.</p>
+        </div>
+        <div class="servicesbox">
+            <img src="ACMEPIC/icon-5.png" alt="Weboldal tervezés és fejlesztés ikon">
+            <h3>Weboldal tervezés és fejlesztés</h3>
+            <p>A weboldalkészítő cég szakemberei által készített egyedi és modern weboldalak tervezése és fejlesztése, amelyek megfelelnek az ügyfél igényeinek és célcsoportjának.</p>
+        </div>
+        <div class="servicesbox">
+            <img src="ACMEPIC/icon-6.png" alt="Weboldal tervezés és fejlesztés ikon">
+            <h3>Weboldal tervezés és fejlesztés</h3>
+            <p>A weboldalkészítő cég szakemberei által készített egyedi és modern weboldalak tervezése és fejlesztése, amelyek megfelelnek az ügyfél igényeinek és célcsoportjának.</p>
+        </div>
 
-<footer>
-    <div class="container">
-    ACME
 </div>
-</footer>
-</div>
-</body>
+      </section>
+        <footer>
+          <div class="container">ACME</div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
