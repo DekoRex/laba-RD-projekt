@@ -1,6 +1,12 @@
 * {
   font-family: Roboto;
 }
+:root {
+  --normal-color-lightbg:linear-gradient(116.82deg, #eeeef0 0%, #ccccd8 100%);
+  --normal-color-darkbg:#121215;
+  --normal-color-lighttxt:#EEEEF0;
+  --normal-color-darktxt:#EEEEF0;
+}
 a {
   text-decoration: none;
 }
@@ -34,6 +40,51 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Roboto;
+}
+/* headmenu*/
+#frame-1 .container {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100vw;
+  max-width: 1440px;
+}
+
+#frame-1 {
+  height: 80px;
+  border-bottom: #121215 1px solid;
+  margin-bottom: 0px;
+}
+
+.headlogo {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 25px;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 47px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+#mainmenu {
+  width: auto;
+  position: relative;
+}
+menu ul {
+  list-style-type: none;
+}
+menu ul li {
+  display: inline;
+  padding: 0px 32px 0px 32px;
+}
+menu a {
+}
+li {
+  list-style-type: none;
 }
 /* company  */
 .company {
@@ -100,43 +151,7 @@ footer {
   justify-self: stretch;
   width: 1440px;
 }
-#frame-1 {
-  height: 80px;
-  border-bottom: #121215 1px solid;
-  margin-bottom: 0px;
-}
-#frame-1 .container {
-  height: 80px;
-}
-.headlogo {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 25px;
-  display: inline-block;
-  font-size: 40px;
-  font-weight: 100;
-  line-height: 47px;
-  letter-spacing: 0px;
-  text-align: left;
-}
-menu {
-  float: right;
-  display: inline;
-  padding: 1% 0 1% 0;
-  margin: 0px 0px 0px 0px;
-}
-menu ul {
-  list-style-type: none;
-}
-menu ul li {
-  display: inline;
-  padding: 0px 32px 0px 32px;
-}
-menu a {
-}
-li {
-  list-style-type: none;
-}
+
 .group1 {
   background: #121215;
   height: 723px;
@@ -228,52 +243,81 @@ li {
 /*services*/
 .services {
   display: block;
-  margin:80px
+  margin: 80px;
 }
 .services h1 {
   text-align: center;
 }
 .servicescontainer {
-  display: flex; 
+  display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  height: 867px;
-  width: 1280px;
+  height: auto;
+  width: 100vw;
+  max-width: 1280px;
+  gap: 50px;
+  animation-delay: 2s;
+  animation-duration: 4s;
 }
 .servicesbox {
-width: 379px;height: 351px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
-margin: 0px;
+  width: 379px;
+  height: 351px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
 }
 .servicesbox img {
-  height: 61px; width: auto;
+  height: 61px;
+  width: auto;
   text-align: center;
   display: block;
   position: relative;
-  padding-left:50%;
+  padding-left: 50%;
   padding-right: 50%;
 }
-.servicesbox h3{
-font-size: 24px;
-font-weight: 700;
-line-height: 28px;
-letter-spacing: 0px;
-text-align: center;
-
+.servicesbox h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: center;
 }
 .servicesbox p {
-font-size: 24px;
-font-weight: 400;
-line-height: 28px;
-letter-spacing: 0px;
-text-align: left;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
 }
-
-
+.bold {
+  font-weight: 700;
+}
+.contact li {
+  list-style-type: disc;
+}
+/*contact*/
+.contact .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 80px;
+  padding: 80px;
+}
+.contact h1 {
+  text-align: center;
+}
+.contactform{
+  background: #121215;
+  width: 1440px;
+  height: 503px;
+  padding: 80px;
+  color:#ccccd8;
+}
+/*--------------*/
 /* footer all*/
 footer {
   height: 291px;
@@ -294,6 +338,17 @@ footer .container {
   vertical-align: middle;
   padding: 5%;
 }
-@media screen:350px {
-  
+
+@media only screen and (max-width: 365px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+      background-color: white;
+      color: black;
+  }
 }
