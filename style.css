@@ -10,6 +10,7 @@
 }
 a {
   text-decoration: none;
+  color: #000;
 }
 .c-menu a:visited, #mainmenu a:visited {
   color: #121215;
