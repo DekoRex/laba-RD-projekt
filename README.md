@@ -1,3 +1,4 @@
 Frontend házifeladat folyamatban
-külső link:
-dekorex.hu/projekt
+
+Külső link:
+https://dekorex.hu/projekt
