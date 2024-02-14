@@ -48,26 +48,16 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet" />
-  <script>
-    function menuoff() {
-      const menustate = document.getElementById("mainmenu");
-      if (menustate.style.display === "block") {
-        menustate.style.display = "none";
-      } else {
-        menustate.style.display = "block";
-      }
-    }
-  </script>
+ 
 </head>
 
 <body>
   <div id="maincontent">
     <section id="frame-1">
       <div class="container">
-        <div class="headlogo"><a href="index.html">ACME Inc.</a></div>
+        <div class="headlogo"><a href="index.html">ACME</a></div>
         <menu id="mainmenu">
-          <div class="hambi"><img src="hambi.png" alt="menubutton"></div>
-          <ul>
+            <ul>
             <li><a href="company.html" target="_self">Céginformáció</a></li>
             <li><a href="services.html" target="_self">Szolgáltatásaink</a></li>
             <li><a href="contact.html" target="_self" style="font-weight: 700;">Kapcsolat</a></li>
@@ -79,7 +69,7 @@
 
       <h1>Kapcsolat</h1>
       <div class="container">
-        <div>
+        <div class="introduce">
           <p>
             <span class="bold"> Alapítás éve:</span> 2000 <br>
             <span class="bold">Ágazat:</span> Technológia és szolgáltatások <br><br>
@@ -104,7 +94,7 @@
           </p></div>
           <div class="mapbox"><iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1758.3137477980904!2d18.417302655462212!3d47.185020363629604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4769f7a6be086179%3A0x72424bd57568dd50!2zw5xsxZEgbGXDoW55IHN6b2Jvcg!5e0!3m2!1shu!2shu!4v1707740626583!5m2!1shu!2shu"
-              width="449" height="772" style="border:0;" allowfullscreen="" loading="lazy"
+              width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         
       </div>
@@ -112,16 +102,24 @@
     <section class="contactform">
 <form action="requestform">
   <div class="sor">
-<label for="nev">Név</label>
+    <div class="f-csop">
+<label for="nev">Név</label><br>
 <input type="text" id="name" name="name" autocomplete="name" required="">
-<label for="E-mail">E-mail cím</label>
+</div>
+<div class="f-csop">
+<label for="E-mail">E-mail cím</label><br>
 <input type="email" id="email" name="email" autocomplete="email" required="">
-<label for="tel"> Telefonszám</label>
+</div>
+<div class="f-csop">
+<label for="tel"> Telefonszám</label><br>
 <input type="tel" id="phone" name="phone" autocomplete="tel">
 </div>
-<label for="Üzenet">Üzenet</label>
-<input type="text"><br>
-<button class="btn btn-primary" type="Küldés">Elküld</button>
+</div>
+<div class="f-csop">
+<label for="Üzenet">Üzenet</label><br>
+<textarea id="message" name="message" required=""></textarea><br>
+</div>
+<button class="button" type="Küldés">Küldés</button>
 
 </form>
     </section>

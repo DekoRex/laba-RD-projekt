@@ -2,18 +2,19 @@
   font-family: Roboto;
 }
 :root {
-  --normal-color-lightbg:linear-gradient(116.82deg, #eeeef0 0%, #ccccd8 100%);
-  --normal-color-darkbg:#121215;
-  --normal-color-lighttxt:#EEEEF0;
-  --normal-color-darktxt:#EEEEF0;
+  --normal-color-lightbg: linear-gradient(116.82deg, #eeeef0 0%, #ccccd8 100%);
+  --normal-color-darkbg: #121215;
+  --normal-color-lighttxt: #eeeef0;
+  --normal-color-darktxt: #eeeef0;
+  width: auto;height: auto;
 }
 a {
   text-decoration: none;
 }
-a:visited {
+.c-menu a:visited, #mainmenu a:visited {
   color: #121215;
 }
-a:hover {
+.c-menu a:hover, #mainmenu a:hover{
   color: #d166ff;
 }
 .menu a:active {
@@ -22,7 +23,7 @@ a:hover {
 }
 body {
   margin: 0px;
-  width: 100vw;
+  width: auto;height: auto;
   background: linear-gradient(116.82deg, #eeeef0 0%, #ccccd8 100%);
 }
 /* cimlap  */
@@ -31,18 +32,100 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+#coverpage {
+  display: flex;
+max-width: 1440px;
+max-height: 1024px;
+height: 100vh;
+flex-direction: row;
+flex-wrap: nowrap;
+align-content: center;
+justify-content: center;
+align-items: center;
+}
 .mbox {
-  position: absolute;
+ /*position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
   display: flex;
-  justify-content: center;
+  width: 902px;
   align-items: center;
-  font-family: Roboto;
+  gap: 50px;
+  flex-shrink: 0;
+}
+.company {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 75px;
+  letter-spacing: 15px;
+  text-align: left;
+  height: 219px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.c-menu {
+  height: 219px;
+  font-size: 54px;
+  font-weight: 100;
+  line-height: 83px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-left: 20px;
+  border-left: 1px solid #121215;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.c-menu a{color: #121215;}
+@media (max-width: 375px) {
+  body{
+    background: linear-gradient(117deg, #121215 0%, #262629 100%);
+    color: white; }
+    #coverpage {display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: nowrap;
+      text-align: center;}
+    .mbox {display: flex;
+      width: 360px;
+      align-items: center;
+      gap: 50px;
+      flex-shrink: 0;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;}
+    .company {font-size: 48px;display: flex;align-items: center;justify-content: flex-end;
+      flex-wrap: nowrap;
+      flex-direction: column;text-align: center;}
+    .c-menu {border-top: 1px solid #ffffff;border-left: none;gap: 30px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      line-height: normal;
+      align-items: center;
+      justify-content: flex-end;
+    line-height: normal;
+  padding:0px}
+    .c-menu a, .c-menu a:visited{font-size: 40px;color: #ffffff;}
+    .c-menu a:hover {font-weight: 400;}
+    }
+  }
 }
 /* headmenu*/
-#frame-1 .container {
+#frame-1 {
+  height: 80px;
+  border-bottom: #121215 1px solid;
+  margin-bottom: 0px;
+}
+#frame-1 .container{
   height: 80px;
   display: flex;
   flex-direction: row;
@@ -51,19 +134,13 @@ body {
   align-items: flex-end;
   width: 100vw;
   max-width: 1440px;
+  border-bottom: 1px solid #121215;
 }
-
-#frame-1 {
-  height: 80px;
-  border-bottom: #121215 1px solid;
-  margin-bottom: 0px;
-}
-
 .headlogo {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 25px;
-  display: inline-block;
+  display: block;
   font-size: 40px;
   font-weight: 100;
   line-height: 47px;
@@ -76,40 +153,29 @@ body {
 }
 menu ul {
   list-style-type: none;
+  text-align: right;
 }
 menu ul li {
   display: inline;
   padding: 0px 32px 0px 32px;
-}
-menu a {
+  text-align: right;
 }
 li {
   list-style-type: none;
 }
+.headlogo a::after {content:" Inc.";}
+@media (max-width: 375px) {
+  .headlogo {font-size: 32px;padding:0px;font-weight: 400;}
+  #mainmenu a, #mainmenu a:visited{color: #ffffff;font-weight: 100;
+    line-height: normal;}
+  #frame-1 .container {align-items: center;}
+  .headlogo a::after {content:"";}
+  .headlogo a:visited {color: #ffffff;}
+  
+}
+
 /* company  */
-.company {
-  font-size: 64px;
-  font-weight: 900;
-  line-height: 75px;
-  letter-spacing: 15px;
-  text-align: left;
-  float: left;
-  height: 219px;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  border-right: 1px solid #121215;
-  padding-right: 20px;
-}
-.c-menu {
-  display: inline;
-  height: 219px;
-  font-size: 54px;
-  font-weight: 100;
-  line-height: 83px;
-  letter-spacing: 0px;
-  text-align: left;
-  padding-left: 20px;
-}
+
 .group2 {
   width: 100%;
 }
@@ -149,12 +215,12 @@ footer {
   display: block;
   margin: 0px;
   justify-self: stretch;
-  width: 1440px;
+  max-width: 1440px;
 }
 
 .group1 {
   background: #121215;
-  height: 723px;
+  min-height: 723px;
 }
 .testimonial {
   color: #ccccd8;
@@ -164,11 +230,14 @@ footer {
 }
 .users {
   margin: 5px 10px 5px 10px;
-  width: 1280px;
+  max-width: 1280px;
   display: flex;
   align-items: flex-end;
   vertical-align: top;
   margin-inline: 0px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
 }
 .userbox {
   width: 360px;
@@ -240,6 +309,20 @@ footer {
   letter-spacing: 0px;
   text-align: left;
 }
+@media only screen and (max-width: 375px) and (max-width:500px) {
+  .group2 .container {width: auto;margin:0px;padding: 0px;height: 281px;}
+  .headline h1{font-size: 50px;color: #ffffff;text-align: center;
+    margin:0px;padding: 0px; line-height: 120%;padding-top: 32px;}
+    .serviceslink {bottom:-70px;}
+    .serviceslink a:visited {color: #ffffff;}
+  .testimonial {background-color: #ffffff;color: #121215;padding: 32px;}
+  .users {margin: 0px;}
+  .userbox {margin: 0px;padding: 0px;width: 311px;}
+  .usertext {color: #121215;font-size: 24px;font-style: italic;font-weight: 400;}
+   .intro p {font-size: 18px;}
+   .textarea {padding:32px ;}
+}
+
 /*services*/
 .services {
   display: block;
@@ -295,46 +378,125 @@ footer {
 .bold {
   font-weight: 700;
 }
+@media (max-width: 375px) {
+  .servicesbox img {filter: invert();}
+}
+  
+} 
+/*contact*/
 .contact li {
   list-style-type: disc;
 }
-/*contact*/
 .contact .container {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  align-items: stretch;
+  justify-content: space-around;
   column-gap: 80px;
   padding: 80px;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.contact .introduce {
+  max-width: 702px;
 }
 .contact h1 {
   text-align: center;
 }
-.contactform{
+.contactform {
   background: #121215;
-  width: 1440px;
+  max-width: 1440px;
   height: 503px;
   padding: 80px;
-  color:#ccccd8;
+  color: #ccccd8;
 }
-input {
-  width: 100%;
+input, textarea #message{
+  max-width: 360px;
   box-sizing: border-box;
   margin-bottom: 8px;
   padding: 10px;
   font-size: 24px;
   font-weight: 700;
-  border-bottom: 4px solid #A0009B;
+  border-bottom: 4px solid #a0009b;
   background-color: #888888;
 }
-.requestform .sor{
+.contactform .sor {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.contactform label {
+  color: #FFF;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.contact f-csop {
+  flex-basis: 28%;
+  box-sizing: border-box;
+  margin-right: 3px;
+}
+textarea{
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    border-bottom: 4px solid #A0009B;
+    background-color: #888888;
+  min-height: 148px;
+  }
+button {
+  width: 140px;
+  height: 38px;
+float:right;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(to right, #7000A0, #A0009B);
+  color: #FFF;
+}
+.mapbox iframe{
+  height:500px ;width:max-content;
+}
+@media (max-width: 375px) {
+  .contact {
+    background: linear-gradient(117deg, #121215 0%, #262629 100%);
+  height:auto;overflow:hidden}
+    .contactform {
+      background: #ffffff;max-width: 1440px;
+      height: auto;padding: 35px;color: #000;}
+    .contact .container {padding: 35px;}
+    .mapbox {padding: 35px;height: 400px;}
+    button {padding:0px;margin: 0px; }
+    .contactform label {color: #000;font-size: 24px;
+    max-width: 300px;}
+    button {color: #eeeef0; display: flex;
+      width: 200px;
+      padding: 13px 106px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;}
+      .f-csop {
+        display: flex;
+flex-direction: column;
+align-items: flex-start;
+align-self: stretch;
+      }
+  }
 /*--------------*/
 /* footer all*/
 footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   height: 291px;
   background: linear-gradient(90.28deg, #7000a0 0.01%, #a0009b 100%);
 }
@@ -343,27 +505,44 @@ footer .container {
   font-size: 120px;
   font-weight: 400;
   line-height: 141px;
-  letter-spacing: 200px;
+  letter-spacing: 1em;
   text-align: center;
   color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
-  width: 929px;
+  max-width: 929px;
   height: 141px;
   vertical-align: middle;
-  padding: 5%;
-}
-
-@media only screen and (max-width: 365px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
   }
+/*---------375px-------------*/
+@media (max-width: 375px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    width: 375px;
+    height: 200px;
+  }
+  footer .container {
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1em;
+    margin: 0px;padding: 0px;
+    height: auto;
+    max-width:260px;
+  }
+  
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   body {
-      background-color: white;
-      color: black;
+    background:linear-gradient(117deg, #121215 0%, #262629 100%);
+    color: #ffffff;
   }
 }
