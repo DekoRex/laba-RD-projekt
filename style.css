@@ -121,12 +121,15 @@ body {
     align-items: center;
   }
   .line {
-    width: 100vh;
+    width: 100%;
     height: 1px;
     margin: 50 0px;
   }
   .c-menu {
     align-items: center;
+  }
+  .company {
+    text-align: center;
   }
   
 }
