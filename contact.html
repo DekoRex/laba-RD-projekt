@@ -1,34 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu-HU">
-<!-- Frontendfejlesztés az alapoktól Projektfeladat
-    Egy elképzelt cég bemutatkozó weboldalára kapsz megbízást.
-    A feladat az, hogy a megismert eszközökkel és az interneten fellelhető végtelen eszköztárral
-    implementáld a weboldal statikus változatát.
-    A weboldal struktúrájának a következőképpen kell kinéznie majd:
-    ● index.html Kezdőoldal
-    ● kapcsolat.html Kapcsolatfelvételi űrlap
-    ● ceginformacio.html Céginformáció
-    ● szolgaltatasok.html Szolgáltatások
-    A weboldal designját és tartalmát az alábbi Figma linkeken találod meg:
-    Desktop Dark Mode: Desktop Light Mode: Mobil:
-    Dark mode elemek Light mode elemek Mobil elemek
-    Dark Mode prototípus Light mode prototípus Mobil prototípus
-    Az elkészült fájlokat töltsd fel a githubodba egy erre létrehozott, új repositoryba és publikáld
-    github pages-re.
-    A repository és az elkészült weboldal linkjét küldd el nekem.
-    Az értékelésben szerepet fog játszani (fontossági sorrendben):
-    1. terv vs. megvalósítás (pixelpontosság)
-    2. funkcionalitás teljessége
-    3. használhatóság (pl. fekete alapon, fekete szöveg ne legyen)
-    4. reszponzivitás (360px-től 1920px-ig)
-    5. valid html, css, js
-    6. jövőállóság (inline style-ok, abszolút pozíció, változók, konzisztencia,
-    karbantarthatóság, stb).
-    7. commit history
-    8. szemantikus html
-    Plusz pont jár:
-    + látens ügyféligények kielégítéséért
-    + feldobott labdák lecsapásáért (kreativitásodra bízva) -->
+<!-- Frontendfejlesztés az alapoktól Projektfeladat-->
 
 <head>
   <meta charset="utf-8" />
@@ -48,7 +20,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet" />
- 
+
 </head>
 
 <body>
@@ -57,7 +29,7 @@
       <div class="container">
         <div class="headlogo"><a href="index.html">ACME</a></div>
         <menu id="mainmenu">
-            <ul>
+          <ul>
             <li><a href="company.html" target="_self">Céginformáció</a></li>
             <li><a href="services.html" target="_self">Szolgáltatásaink</a></li>
             <li><a href="contact.html" target="_self" style="font-weight: 700;">Kapcsolat</a></li>
@@ -91,37 +63,42 @@
           <span class="bold">Kapcsolat:</span><br> Weboldal: <a href="www.acmeinc.com" target="_blank">
             www.acmeinc.com</a><br> Telefon: +36 123 456 789 <br>E-mail: <a
             href="mailto:info@acmeinc.com">info@acmeinc.com</a> <br>
-          </p></div>
-          <div class="mapbox"><iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1758.3137477980904!2d18.417302655462212!3d47.185020363629604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4769f7a6be086179%3A0x72424bd57568dd50!2zw5xsxZEgbGXDoW55IHN6b2Jvcg!5e0!3m2!1shu!2shu!4v1707740626583!5m2!1shu!2shu"
-              width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-        
+          </p>
+        </div>
+        <div class="mapbox"><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1758.3137477980904!2d18.417302655462212!3d47.185020363629604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4769f7a6be086179%3A0x72424bd57568dd50!2zw5xsxZEgbGXDoW55IHN6b2Jvcg!5e0!3m2!1shu!2shu!4v1707740626583!5m2!1shu!2shu"
+            width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
       </div>
     </section>
     <section class="contactform">
-<form action="requestform">
-  <div class="sor">
-    <div class="f-csop">
-<label for="nev">Név</label><br>
-<input type="text" id="name" name="name" autocomplete="name" required="">
-</div>
-<div class="f-csop">
-<label for="E-mail">E-mail cím</label><br>
-<input type="email" id="email" name="email" autocomplete="email" required="">
-</div>
-<div class="f-csop">
-<label for="tel"> Telefonszám</label><br>
-<input type="tel" id="phone" name="phone" autocomplete="tel">
-</div>
-</div>
-<div class="f-csop">
-<label for="Üzenet">Üzenet</label><br>
-<textarea id="message" name="message" required=""></textarea><br>
-</div>
-<button class="button" type="Küldés">Küldés</button>
-
-</form>
+      <div class="requestform">
+        <form action="requestform">
+          <div class="sor">
+            <div class="f-csop">
+              <label for="nev">Név</label><br>
+              <div class="inputrow">
+              <input type="text" id="name" name="name" autocomplete="name" required="">
+            </div></div>
+            <div class="f-csop">
+              <label for="E-mail">E-mail cím</label><br>
+              <div class="inputrow">
+              <input type="email" id="email" name="email" autocomplete="email" required="">
+            </div></div>
+            <div class="f-csop">
+              <label for="tel"> Telefonszám</label><br>
+              <div class="inputrow">
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div></div>
+          </div>
+          <div class="f-csop">
+            <label for="Üzenet">Üzenet</label><br>
+            <textarea id="message" name="message" required=""></textarea><br>
+          </div>
+          <button class="button" type="Küldés">Küldés</button>
+        </form>
+      </div>
     </section>
     <footer>
       <div class="container">ACME</div>

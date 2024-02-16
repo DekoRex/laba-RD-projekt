@@ -18,8 +18,7 @@ a {
   color: #000;
 }
 
-.c-menu a:visited,
-#mainmenu a:visited {
+.c-menu a:visited {
   color: var(--darktxt);
 }
 
@@ -36,7 +35,7 @@ a {
 body {
   margin: 0px;
   width: auto;
-  height: auto;
+
   background: var(--ltheme-lbg);
 }
 
@@ -109,6 +108,7 @@ body {
   margin: 0 50px;
   background-color: var(--darktxt);
 }
+
 /*--responsive--*/
 @media (max-width: 950px) {
   .mbox {
@@ -120,20 +120,28 @@ body {
     justify-content: center;
     align-items: center;
   }
+
   .line {
     width: 100%;
     height: 1px;
     margin: 50 0px;
   }
+
   .c-menu {
     align-items: center;
   }
+
   .company {
     text-align: center;
   }
-  
+
 }
+
 @media (max-width: 375px) {
+  #maincontent {
+    width: 100%;
+  }
+
   #coverpage {
     display: flex;
     justify-content: center;
@@ -176,10 +184,11 @@ body {
     line-height: normal;
     padding: 0px
   }
+
   .c-menu a,
   .c-menu a:visited {
     font-size: 40px;
-     }
+  }
 
   .c-menu a:hover {
     font-weight: 400;
@@ -196,8 +205,8 @@ body {
     color: var(--lighttxt);
   }
 
-  .mainmenu a,
-  .mainmenu a:visited,
+  .c-menu a,
+  .c-menu a:visited,
   .c-menu a:visited {
     color: var(--lighttxt)
   }
@@ -210,8 +219,8 @@ body {
 
 /* headmenu*/
 #frame-1 {
-  height: 80px;
-  border-bottom: #121215 1px solid;
+  height: auto;
+  border-bottom: var(--darktxt) 1px solid;
   margin-bottom: 0px;
 }
 
@@ -222,9 +231,7 @@ body {
   align-content: center;
   justify-content: space-between;
   align-items: flex-end;
-  width: 100vw;
   max-width: 1440px;
-  border-bottom: 1px solid #121215;
 }
 
 .headlogo {
@@ -244,15 +251,17 @@ body {
   position: relative;
 }
 
-menu ul {
+#mainmenu ul {
+  margin-bottom: 10px;
   list-style-type: none;
   text-align: right;
 }
 
-menu ul li {
+#mainmenu ul li {
   display: inline;
   padding: 0px 32px 0px 32px;
   text-align: right;
+  font-size: 24px;
 }
 
 li {
@@ -261,6 +270,25 @@ li {
 
 .headlogo a::after {
   content: " Inc.";
+}
+
+@media (max-width: 750px) {
+
+  .headlogo a::after {
+    content: "";
+  }
+
+  #mainmenu,
+  #mainmenu ul {
+    margin: 0px 0px 5px 0px;
+  }
+
+  #mainmenu ul li {
+    text-align: right;
+    font-size: 20px;
+  }
+
+
 }
 
 @media (max-width: 375px) {
@@ -272,7 +300,6 @@ li {
 
   #mainmenu a,
   #mainmenu a:visited {
-    color: #ffffff;
     font-weight: 100;
     line-height: normal;
   }
@@ -281,12 +308,20 @@ li {
     align-items: center;
   }
 
-  .headlogo a::after {
-    content: "";
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+
+  #mainmenu a,
+  #mainmenu a:visited,
+  .headlogo a:visited {
+    color: var(--lighttxt);
   }
 
-  .headlogo a:visited {
-    color: #ffffff;
+  #frame-1 {
+    border-bottom: var(--lighttxt) 1px solid;
   }
 
 }
@@ -298,11 +333,17 @@ li {
 }
 
 .group2 .container {
-  width: 1280px;
-  height: 471px;
+
   background: url(ACMEPIC/computer.png) left center no-repeat;
-  background-size: 628px 471px;
+  background-size: auto 100%;
   margin: 80px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: stretch;
+
 }
 
 .group2 h1 {
@@ -311,18 +352,14 @@ li {
   line-height: 141px;
   letter-spacing: 0px;
   text-align: left;
-  color: #121215;
+  color: var(--darktxt);
   text-shadow: 0px 0px 15px #ffffff;
-  margin-left: 35%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  margin-left: 25%;
+
 }
 
 .serviceslink {
   display: block;
-  position: relative;
-  right: 0px;
-  bottom: 70px;
   text-align: right;
   text-decoration: underline;
 }
@@ -340,15 +377,16 @@ footer {
 }
 
 .group1 {
-  background: #121215;
-  min-height: 723px;
+  background: var(--darktxt);
+  height: auto;
+  padding: 80px;
 }
 
 .testimonial {
-  color: #ccccd8;
+  color: var(--lighttxt);
   max-width: 1280px;
   width: auto;
-  margin: auto;
+
 }
 
 .users {
@@ -395,7 +433,7 @@ footer {
 }
 
 .username {
-  color: #d166ff;
+  color: var(--company);
   bottom: 0;
   display: block;
   text-align: right;
@@ -411,7 +449,7 @@ footer {
   line-height: 47px;
   letter-spacing: 0px;
   text-align: center;
-  padding: 50px;
+  padding-bottom: 80px;
 }
 
 .textarea {
@@ -441,6 +479,79 @@ footer {
   text-align: left;
 }
 
+@media (prefers-color-scheme: dark) {
+  .group2 h1 {
+    color: var(--lighttxt);
+    text-shadow: none;
+  }
+
+  .serviceslink a,
+  .serviceslink a:visited {
+    color: var(--lighttxt);
+  }
+
+  .testimonial {
+    background-color: var(--lighttxt);
+  }
+
+  .serviceslink a:visited {
+    color: var(--lighttxt);
+  }
+
+  .usertext,
+  .testimonial h1 {
+    color: var(--darktxt);
+  }
+
+  .group1 {
+    background-color: var(--lighttxt);
+  }
+
+}
+
+/*--responsive--*/
+@media (max-width: 950px) {
+  .group2 h1 {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-size: calc(50px + (100vw - 365px) * (90 - 50) / (800 - 365));
+  }
+
+  .servicesbox {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .services {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+}
+
+.group2 .container {
+  margin: 10%;
+}
+
+.testimonial h1 {
+  padding-bottom: 32px;
+}
+
+.group2,
+.group1 {
+  padding: 32px;
+}
+
+
 @media only screen and (max-width: 375px) and (max-width:500px) {
   .group2 .container {
     width: auto;
@@ -451,7 +562,6 @@ footer {
 
   .headline h1 {
     font-size: 50px;
-    color: #ffffff;
     text-align: center;
     margin: 0px;
     padding: 0px;
@@ -463,12 +573,10 @@ footer {
     bottom: -70px;
   }
 
-  .serviceslink a:visited {
-    color: #ffffff;
-  }
+
 
   .testimonial {
-    background-color: #ffffff;
+
     color: #121215;
     padding: 32px;
   }
@@ -484,7 +592,6 @@ footer {
   }
 
   .usertext {
-    color: #121215;
     font-size: 24px;
     font-style: italic;
     font-weight: 400;
@@ -498,19 +605,25 @@ footer {
     padding: 32px;
   }
 
-  .services {
-    margin: 35px;
-  }
+
 }
+
 
 /*services*/
 .services {
-  display: block;
   margin: 80px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .services h1 {
   text-align: center;
+  margin-bottom: 80px;
 }
 
 .servicescontainer {
@@ -518,22 +631,19 @@ footer {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  height: auto;
-  width: 100vw;
   max-width: 1280px;
-  gap: 50px;
-  animation-delay: 2s;
-  animation-duration: 4s;
+  gap: 64px;
 }
 
 .servicesbox {
   width: 379px;
-  height: 351px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 0px;
+  padding: 0px;
 }
 
 .servicesbox img {
@@ -560,13 +670,32 @@ footer {
   line-height: 28px;
   letter-spacing: 0px;
   text-align: left;
+  margin: 0px;
+  padding: 0px;
 }
 
 .bold {
   font-weight: 700;
 }
 
-@media (max-width: 375px) {
+@media (max-width:900px) {
+  .services {
+    margin: 32px;
+    width: auto;
+  }
+
+  .servicesbox,
+  .servicescontainer {
+    width: auto;
+    gap: 32px;
+  }
+
+  .services h1 {
+    margin-bottom: 32px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
   .servicesbox img {
     filter: invert();
   }
@@ -602,11 +731,23 @@ footer {
   height: 503px;
   padding: 80px;
   color: #ccccd8;
+  
 }
-
+.requestform {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  flex-direction: column;
+  align-content: stretch;
+  align-items: stretch;
+  gap: 26px;
+}
+.sor {
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
 input,
 textarea #message {
-  max-width: 360px;
   box-sizing: border-box;
   margin-bottom: 8px;
   padding: 10px;
@@ -614,14 +755,21 @@ textarea #message {
   font-weight: 700;
   border-bottom: 4px solid #a0009b;
   background-color: #888888;
+  width:fit-content;
 }
 
 .contactform .sor {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 50px;
+  flex-direction: row;
+  align-items: center;
+  width:100%;
 }
-
+.inputrow{
+ width: 100%; 
+}
 .contactform label {
   color: #FFF;
   font-size: 24px;
@@ -630,10 +778,11 @@ textarea #message {
   line-height: normal;
 }
 
-.contact f-csop {
+.contact .f-csop {
   flex-basis: 28%;
   box-sizing: border-box;
   margin-right: 3px;
+  width: 360px;
 }
 
 textarea {
@@ -665,6 +814,18 @@ button {
   width: max-content;
 }
 
+/*--------------------*/
+@media (prefers-color-scheme: dark) {
+  .contactform {
+    background-color: var(--lighttxt);
+    color: var(--darktxt);
+  }
+  .contactform label {
+    color: var(--darktxt);
+  }
+}
+
+/*----------------*/
 @media (max-width: 375px) {
   .contact {
     background: linear-gradient(117deg, #121215 0%, #262629 100%);
@@ -678,6 +839,7 @@ button {
     height: auto;
     padding: 35px;
     color: #000;
+
   }
 
   .contact .container {
@@ -729,46 +891,72 @@ footer {
   align-items: center;
   height: 291px;
   background: linear-gradient(90.28deg, #7000a0 0.01%, #a0009b 100%);
+  margin: 0px;
 }
 
 footer .container {
   display: block;
+  /*font-size: calc(40px + (120 - 40) * ((100vw - 800px) / (1440 - 800)));
+  */
   font-size: 120px;
   font-weight: 400;
   line-height: 141px;
-  letter-spacing: 1em;
+  letter-spacing: 200px;
   text-align: center;
   color: #ffffff;
   max-width: 929px;
   height: 141px;
 }
 
-/*---------375px-------------*/
-@media (max-width: 375px) {
-  footer {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
-    width: 375px;
-    height: 200px;
-  }
-
+@media (max-width: 1200px) {
   footer .container {
-    color: #FFF;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1em;
-    margin: 0px;
-    padding: 0px;
-    height: auto;
-    max-width: 260px;
+    font-size: calc(40px + (120 - 40) * ((100vw - 800px) / (1440 - 800)));
+    letter-spacing: 2em;
   }
 
+  footer {
+    height: 300px;
+  }
 }
+
+@media (max-width: 800px) {
+  footer .container {
+    font-size: calc(40px + (120 - 90) * ((100vw - 800px) / (800 - 300)));
+    letter-spacing: 2em;
+  }
+}
+  @media (max-width: 500px) {
+    footer .container {
+      font-size: 40px;
+      letter-spacing: 50px;
+    }
+  }
+
+  /*---------375px-------------*/
+  @media (max-width: 375px) {
+    footer {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      height: 200px;
+    }
+
+    footer .container {
+      color: #FFF;
+      text-align: center;
+      font-family: Roboto;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 50px;
+      margin: 0px;
+      padding: 0px;
+      height: auto;
+      max-width: 260px;
+    }
+  }
