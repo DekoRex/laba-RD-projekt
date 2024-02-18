@@ -1,4 +1,4 @@
-Frontend házifeladat folyamatban
+Frontend házifeladat kész
 
 Külső link:
-https://dekorex.hu/projekt
+https://dekorex.github.io/laba-RD-projekt/
